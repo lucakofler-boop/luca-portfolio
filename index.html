@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luca Kofler — Portfolio</title>
+  <style>
+    :root{--bg:#fff;--text:#111;--muted:#666;--line:#e9e9e9;--max:980px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(5px);border-bottom:1px solid var(--line);z-index:20}
+    .nav{height:64px;display:flex;justify-content:space-between;align-items:center}
+    .brand{font-weight:650}
+    .lang button{border:1px solid var(--line);background:#fff;padding:8px 12px;border-radius:999px;cursor:pointer}
+    .lang .active{border-color:#111;font-weight:600}
+    section{padding:56px 0;border-bottom:1px solid var(--line)}
+    .hero{min-height:70vh;display:flex;align-items:center}
+    h1{font-size:clamp(42px,9vw,72px);line-height:1.04;margin:0 0 14px;letter-spacing:-.02em}
+    .lead{font-size:clamp(18px,3vw,26px);max-width:34ch;margin:0 0 26px}
+    .cta{display:inline-block;text-decoration:none;color:#111;border:1px solid #111;border-radius:999px;padding:12px 18px}
+    h2{font-size:clamp(24px,4vw,36px);margin:0 0 14px}
+    p{font-size:17px;margin:0 0 14px}
+    .muted{color:var(--muted)}
+
+    .projects{display:grid;gap:40px}
+    .project-card{display:grid;gap:14px}
+    .project-image{aspect-ratio:4/5;width:100%;border:1px solid var(--line);object-fit:cover;background:#f5f5f5}
+    .project-title{font-size:26px;letter-spacing:-.01em;margin:0}
+    .project-text{margin:0;color:#222}
+
+    .contact a{color:#111;text-decoration:none;border-bottom:1px solid #111}
+    footer{padding:24px 0 36px;color:var(--muted);font-size:14px}
+
+    @media (max-width:640px){
+      .wrap{padding:0 18px}
+      .project-title{font-size:22px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">Luca Kofler</div>
+    <div class="lang">
+      <button id="btn-de" class="active">DE</button>
+      <button id="btn-en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <h1 data-i18n="heroTitle">Luca Kofler</h1>
+      <p class="lead" data-i18n="heroLead">Produktdesigner in Wien. Materialorientierte Entwicklung zwischen digitalem Entwurf und handwerklicher Umsetzung.</p>
+      <a class="cta" href="#projects" data-i18n="heroCta">Projekte ansehen</a>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-i18n="aboutTitle">Über mich</h2>
+    <p data-i18n="about1">Ich bin Luca Kofler, 27 Jahre alt, halb Österreicher und halb Franzose. Über meine Leidenschaft fürs Kochen bin ich zum Design gekommen: aus einfachen Ausgangsmaterialien etwas Neues zu schaffen – mit dem Anspruch, dass es bleibt.</p>
+    <p data-i18n="about2">Aktuell arbeite ich vor allem mit Fusion, 3D-Druck, KI sowie Keramikguss und Formenbau.</p>
+    <p class="muted" data-i18n="based">Based in Vienna</p>
+  </section>
+
+  <section id="projects">
+    <h2 data-i18n="projectsTitle">Ausgewählte Projekte</h2>
+    <div class="projects">
+      <article class="project-card">
+        <img class="project-image" src="images/bubbles.jpg" alt="BUBBLES" />
+        <h3 class="project-title">BUBBLES</h3>
+        <p class="project-text" data-i18n="p1">Keramische Teller-Serie, inspiriert von der fragilen Ästhetik von Seifenblasen. Verbindet bewusste Esskultur mit Nachhaltigkeit, regionalen Zutaten und gemeinschaftlichem Essen.</p>
+      </article>
+
+      <article class="project-card">
+        <img class="project-image" src="images/aerosonic.jpg" alt="AEROSONIC" />
+        <h3 class="project-title">AEROSONIC</h3>
+        <p class="project-text" data-i18n="p2">Lautsprecherkonzept aus Carbonfaser mit stromlinienförmiger, skulpturaler Silhouette. Übersetzt Aerodynamik in ein präzises Audio-Objekt.</p>
+      </article>
+
+      <article class="project-card">
+        <img class="project-image" src="images/loop.jpg" alt="LOOP" />
+        <h3 class="project-title">LOOP</h3>
+        <p class="project-text" data-i18n="p3">Leichter Loungechair aus gebogenem Rohrrahmen mit wechselbarer Textil-Sitzfläche. Ein reduziertes Indoor/Outdoor-Objekt, das Komfort und Konstruktion sichtbar verbindet.</p>
+      </article>
+
+      <article class="project-card">
+        <img class="project-image" src="images/space-schach.jpg" alt="SPACE-SCHACH" />
+        <h3 class="project-title">SPACE-SCHACH</h3>
+        <p class="project-text" data-i18n="p4">Serie gedrechselter Schachfiguren aus rotationssymmetrischen Grundkörpern, übersetzt in eine Sci-Fi-Narration. Verbindet handwerkliche Präzision mit futuristischer Formensprache.</p>
+      </article>
+
+      <article class="project-card">
+        <img class="project-image" src="images/das-wasser-zwischen-uns.jpg" alt="DAS WASSER ZWISCHEN UNS" />
+        <h3 class="project-title">DAS WASSER ZWISCHEN UNS</h3>
+        <p class="project-text" data-i18n="p5">Zweiteiliges Keramik-Set für das Händewaschen am Tisch, inspiriert von marokkanischen Essritualen. Macht einen stillen Moment sichtbar und stärkt verbindende Tischkultur.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2 data-i18n="contactTitle">Kontakt</h2>
+    <p data-i18n="contactText">Für Kollaborationen, Aufträge oder Fragen.</p>
+    <p><a href="mailto:luca.kofler@gmail.com">luca.kofler@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/kofler_luca" target="_blank" rel="noopener">@kofler_luca</a></p>
+    <p data-i18n="city">Wien</p>
+  </section>
+
+  <footer>© <span id="year"></span> Luca Kofler</footer>
+</main>
+
+<script>
+const dict={
+  de:{heroTitle:"Luca Kofler",heroLead:"Produktdesigner in Wien. Materialorientierte Entwicklung zwischen digitalem Entwurf und handwerklicher Umsetzung.",heroCta:"Projekte ansehen",aboutTitle:"Über mich",about1:"Ich bin Luca Kofler, 27 Jahre alt, halb Österreicher und halb Franzose. Über meine Leidenschaft fürs Kochen bin ich zum Design gekommen: aus einfachen Ausgangsmaterialien etwas Neues zu schaffen – mit dem Anspruch, dass es bleibt.",about2:"Aktuell arbeite ich vor allem mit Fusion, 3D-Druck, KI sowie Keramikguss und Formenbau.",based:"Based in Vienna",projectsTitle:"Ausgewählte Projekte",p1:"Keramische Teller-Serie, inspiriert von der fragilen Ästhetik von Seifenblasen. Verbindet bewusste Esskultur mit Nachhaltigkeit, regionalen Zutaten und gemeinschaftlichem Essen.",p2:"Lautsprecherkonzept aus Carbonfaser mit stromlinienförmiger, skulpturaler Silhouette. Übersetzt Aerodynamik in ein präzises Audio-Objekt.",p3:"Leichter Loungechair aus gebogenem Rohrrahmen mit wechselbarer Textil-Sitzfläche. Ein reduziertes Indoor/Outdoor-Objekt, das Komfort und Konstruktion sichtbar verbindet.",p4:"Serie gedrechselter Schachfiguren aus rotationssymmetrischen Grundkörpern, übersetzt in eine Sci-Fi-Narration. Verbindet handwerkliche Präzision mit futuristischer Formensprache.",p5:"Zweiteiliges Keramik-Set für das Händewaschen am Tisch, inspiriert von marokkanischen Essritualen. Macht einen stillen Moment sichtbar und stärkt verbindende Tischkultur.",contactTitle:"Kontakt",contactText:"Für Kollaborationen, Aufträge oder Fragen.",city:"Wien"},
+  en:{heroTitle:"Luca Kofler",heroLead:"Product Designer based in Vienna. Material-driven development connecting digital design and hands-on craft.",heroCta:"View projects",aboutTitle:"About",about1:"I'm Luca Kofler, 27, half Austrian and half French. My path into design started through cooking: transforming simple raw materials into something new — with the intention to create work that lasts.",about2:"I currently work with Fusion, 3D printing, AI, ceramic casting, and mold making.",based:"Based in Vienna",projectsTitle:"Selected Projects",p1:"A ceramic plate series inspired by the fragile, transient aesthetics of soap bubbles. It connects mindful dining with sustainability, regional ingredients, and communal eating.",p2:"A carbon-fiber speaker concept with a streamlined, sculptural silhouette. It translates aerodynamic language into a precise audio object.",p3:"A lightweight lounge chair with a bent tubular frame and replaceable textile seat. A reduced indoor/outdoor object that makes comfort and construction visibly one.",p4:"A series of turned chess pieces developed from rotational base geometries and translated into a sci-fi narrative. It combines craftsmanship with a futuristic formal language.",p5:"A two-part ceramic set for washing hands at the table, inspired by Moroccan dining rituals. It makes a quiet moment before eating visible and encourages connected table culture.",contactTitle:"Contact",contactText:"For collaborations, commissions, or inquiries.",city:"Vienna"}
+};
+const items=document.querySelectorAll('[data-i18n]');
+const bde=document.getElementById('btn-de');
+const ben=document.getElementById('btn-en');
+function setLang(l){items.forEach(el=>{const k=el.dataset.i18n; if(dict[l][k]) el.textContent=dict[l][k];}); document.documentElement.lang=l; bde.classList.toggle('active',l==='de'); ben.classList.toggle('active',l==='en'); localStorage.setItem('lk_lang',l);} 
+bde.onclick=()=>setLang('de'); ben.onclick=()=>setLang('en');
+setLang(localStorage.getItem('lk_lang')||'de');
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
